@@ -1,6 +1,7 @@
 # unifi-testing
-repo : https://github.com/gitfarag/unifi.git
-note : authentication has been added in func5 branch
+- repo : https://github.com/gitfarag/unifi.git
+- note : authentication has been added in func5 branch
+- start: npm run watch
 
 ## models and info 
 - userSchema = new Schema ({

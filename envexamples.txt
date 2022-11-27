@@ -1,3 +1,2 @@
 PORT = 3000
 MONGO = mongodb+srv://ahmed:secret2023@cluster0.f4guphj.mongodb.net/?retryWrites=true&w=majority
-JWT_SECRET= secret2023
