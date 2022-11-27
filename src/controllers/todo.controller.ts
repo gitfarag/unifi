@@ -2,15 +2,15 @@ import { Request, Response, RequestHandler } from "express";
 import Todo from "../models/todo.model";
 
 
-// const getAllTodo =async (req:Request, res:Response):Promise<void>=>{
-//     await Todo.find()
-//     .then((todo) => res.json(todo))
-//     .catch((err) =>
-//         res
-//             .status(404)
-//             .json({ message: "Todo not found", error: err.message })
-//     );
-// };
+const getAllTodo =async (req:Request, res:Response):Promise<void>=>{
+    await Todo.find()
+    .then((todo) => res.json(todo))
+    .catch((err) =>
+        res
+            .status(404)
+            .json({ message: "Todo not found", error: err.message })
+    );
+};
 
 const getTodoById =async (req:Request, res:Response):Promise<void>=>{
     const {id} = req.query
@@ -58,7 +58,7 @@ const deleteTodo = async (req:Request, res:Response):Promise<void>=>{
 }
 
 
-export {        
+export {        getAllTodo,
                 getTodoById,
                 createTodo,
                 updateTodo,
