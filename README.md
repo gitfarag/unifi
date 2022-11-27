@@ -1,4 +1,5 @@
 # unifi-testing
+repo : https://github.com/gitfarag/unifi.git
 note : authentication has been added in func5 branch
 
 ## models and info 
