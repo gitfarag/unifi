@@ -1,4 +1,5 @@
 # unifi-testing
+note : authentication has been added in func5 branch
 
 ## models and info 
 - userSchema = new Schema ({
