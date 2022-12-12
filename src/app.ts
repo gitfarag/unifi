@@ -4,18 +4,25 @@ import helmet from "helmet";
 import router from "./router";
 import dotenv from "dotenv";
 import connectDB from './provider/db'
+import morgan from 'morgan'
 
 dotenv.config();
 
 const app = express();
 const port = (process.env.PORT as unknown) as number
 
-app.use(cors(), json(), helmet());
-connectDB()
+app.use(cors(), json(), helmet(), morgan('dev'));
 
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+app.listen(port,async () => {
+
+    connectDB()
+    .then(()=>{
+      console.log(`server is on http://localhost:${port}`)}
+      )
+    .catch(err=>{console.log(err)})
+
+  
 });
 app.get('/',(rq:Request,res:Response)=>{
 res.send("this is the home for todo api")

@@ -1,0 +1,21 @@
+get http://localhost:3000/api/todo
+
+#### get by id
+post http://localhost:3000/api/todo/to?id=63836cabe76fa458d0a423b2
+
+#### add item
+post http://localhost:3000/api/todo/add
+
+Content-Type: application/json
+{
+    "content": {"title": "from vscode",
+    "description":"using REST Client extention"}
+}
+
+#### update item
+put http://localhost:3000/api/todo/update?id=6397ac71678648ce0a471268
+
+#### delete item
+DELETE http://localhost:3000/api/todo/delete?id=6397ac71678648ce0a471268
+
+
